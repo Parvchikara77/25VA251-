@@ -11,7 +11,19 @@
      <script>
         var msg = "Hello World";
         document.write(msg);
-      console.log("Print meassage " + msg);
+      console.log( msg);
+
+      let myinfo= {
+        name : "AA",
+       age : 19,
+       course : "Btech",
+       ismarried : false,
+      }
+      for(let objkeys in myinfo){
+        console.log(myinfo[objkeys]);
+      }
+      
+      console.log(typeof myinfo.ismarried);
     </script>
     
 </body>
