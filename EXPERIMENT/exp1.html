@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+     <style>
+        body{
+font-family: Arial;
+background-color:lightblue;
+text-align:center;
+padding:20px;
+}
+.container{
+background:whitesmoke;
+padding:15px;
+width:500px;
+margin:auto;
+border-radius:20px;
+}
+input{
+padding:8px;
+width:85%;
+margin-top:10px;
+}
+button{
+padding:10px 20px;
+background-color:blue;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+button:hover{
+background-color:darkblue;
+}
+#result{
+margin-top:20px;
+font-weight:bold;
+font-size:18px;
+}
+     </style>
+</head>
+<body>
+      <div class="container">
+<h2>Student Result Calculator</h2>
+<label>Enter Number of Subjects</label>
+<input type="number" id="subjects" placeholder="Enter Number of Subjects"><br><br>
+<button onclick="calculateResult()">Calculate Result</button>
+<div id="result"></div>
+</div>
+    <script>
+    function calculateResult(){
+let n = document.getElementById("subjects").value;
+let total = 0;
+for(let i=1;i<=n;i++){
+let marks = parseFloat(prompt("Enter marks for Subject " + i));
+total = total + marks;
+}
+let average = total / n;
+let grade;
+let result;
+if(average >= 90){
+grade = "A+";
+}
+else if(average >= 75){
+grade = "A";
+}
+else if(average >= 60){
+grade = "B";
+}
+else if(average >= 50){
+grade = "C";
+}
+else{
+grade = "F";
+}
+if(average >= 40){
+result = "PASS";
+}
+else{
+result = "FAIL";
+}
+document.getElementById("result").innerHTML =
+"Total Marks: " + total + "<br>" +
+"Average Marks: " + average.toFixed(2) + "<br>" +
+"Grade: " + grade + "<br>" +
+"Result: " + result;
+}
+    </script>
+</body>
+</html>
