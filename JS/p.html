@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sum of even Numbers</h2>
+
+    <input type = "number" id = "num" placeholder="Enter num">
+    <button onclick ="calculateSum()">Calculate</button>
+
+    <div id ="result"></div>
+    <script>
+         function calculateSum(){
+            let sum = 0;
+            let n = document.getElementById("num").value;
+
+            for(let i=1;i<=n;i++){
+                if(i%2==0){
+                    sum+=i;
+                }
+            }
+            document.getElementById("result").innerHTML = "Sum of even nos from 1 to " + n + " is:" + sum;
+         }
+    </script>
+   
+</body>
+</html>
