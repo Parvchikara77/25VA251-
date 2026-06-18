@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of N numbers</title>
+</head>
+<body>
+    <h2>Sum of N numbers</h2>
+    <input type="number" id="num" placeholder="Enter number">
+    <button onclick = "FindSum()">Calculate</button>
+
+    <h3 id="result"></h3>
+    <script>
+        function FindSum(){
+            let n= Number(document.getElementById("num").value);
+            let sum = 0;
+            for(let i=1; i<=n; i++){
+                sum += i;
+            }
+            document.getElementById("result").innerHTML = "sum of no.s from 1 to " + n + " is " + sum;
+
+        }
+    </script>
+</body>
+</html>

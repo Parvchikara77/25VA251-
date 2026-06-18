@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for... best used when u know the no. of iterations in advance
+        let studentList =["vk" , "vi" , "deep", "sneh"];
+        for(let i=0;i<studentList.length;i++){
+            console.log(studentList[i]);
+        }
+        //while.. used when the no. of iterations is uncertain, and the loop should continue as long as a condition is true
+
+        let x=0;
+        while(x<studentList.length){
+            console.log(studentList[x]);
+            x++;
+        }
+        //for ...of loop - iterate over the values of iterable objects such as Arrays, Strings, Maps, Sets, and more
+
+        for (let y of studentList){
+            console.log(y);
+        }
+
+    </script>
+    
+</body>
+</html>
